@@ -1,0 +1,36 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Pay WhatsApp via Paypal – Florian Harbecke</title>
+<meta name="description" content="I make stuff, Websites mostly. Oh, and I also design, take Pictures and tweet.">
+<meta name="viewport" content="width=device-width">
+<meta name="author" content="Florian Harbecke @hbcke">
+<link rel="stylesheet" href="css/main.css">
+<script src="js/main.js"></script>
+</head>
+<body>
+<div id="header">
+	<div class="wrap">
+		<h1>Pay WhatsApp via Paypal</h1>
+		<p>All data handling and evaluation is done <strong>inside the browser<strong>.</p>
+		<p>Therefore <strong>no data can be stored</strong> or otherwise passed to a third party.</p>
+		<h2>Simply enter your mobile phone number below.</h2>
+	</div>
+</div>
+<div id="container">
+	<div id="main">
+		<div id="wapp">
+			<form id="pay" class="wrap" onsubmit="return (function(m) { m = m.replace(/^\+/, ''); document.location.href = 'http://www.whatsapp.com/payments/cksum_pay.php?phone='+m+'&cksum='+md5(m+'abc'); return false;})(this.m.value)">
+				<input name="m" type="text" value="+49123456789" onfocus="if(this.value==this.defaultValue) this.value='';" onblur="if(this.value=='') this.value=this.defaultValue;">
+				<input name"pay" type="submit" value="Contiune">
+			</form>
+		</div>
+	</div>
+</div>
+</body>
+</html>
